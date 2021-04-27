@@ -5,6 +5,7 @@ services:
   mysql:
     build: .docker/mysql
     image: mysql:5.7
+    container_name: db_mysql
     command: --innodb-use-native-aio=0
     restart: always
     tty: true
@@ -17,6 +18,7 @@ services:
 
   postgres:
     build: .docker/postgres
+    container_name: db_postgres
     restart: always
     tty: true
     ports:
